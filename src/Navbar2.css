@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.7%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+li {
+    list-style: none;
+}
+
+.main-nav {
+
+    width: 100%;
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+
+div {
+    height: 8rem;
+}
+
+.logo {
+    display: grid;
+    grid-column: 2/3;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu-link {
+    grid-column: 3/4;
+}
+
+.menu-link ul {
+
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.social-media {
+    grid-column: 4/5;
+}
+
+.social-media ul {
+
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.social-media ul li {
+    text-align: right;
+}
+
+.social-media ul li:first-child {
+    grid-column: 2/3;
+    text-align: right;
+
+}
+
+.menu-link ul li a {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.social-media ul li a {
+    font-size: 2rem;
+}
+
+
+.logo h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-media .hamburger-menu {
+    display: none;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+.show-menu {
+    display: none;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+   
+
+@media (width < 1080px) {
+
+    #root {
+        height: 7rem;
+    }
+
+    .main-nav {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .logo {
+        padding-left: 5rem;
+    }
+
+    .logo h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav {
+        height: 7rem;
+        grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    }
+
+    .logo,
+    .social-media ul {
+        height: 7rem;
+    }
+
+    .menu-link ul {
+        height: 7rem;
+    }
+
+    .menu-link ul li a {
+        font-size: 2rem;
+    }
+
+    .social-media ul li a {
+        font-size: 2rem;
+    }
+
+    .social-media .hamburger-menu {
+        display: none;
+    }
+
+}
+
+@media (width < 998px) {
+
+    #root {
+        height: 6rem;
+    }
+
+    .logo {
+        padding-left: 5rem;
+    }
+
+    .logo h2 {
+        font-size: 2rem;
+    }
+
+    .main-nav {
+        height: 6rem;
+        grid-template-columns: 2rem 2fr 3fr 2fr 2rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .menu-link {
+        display: none;
+    }
+
+    .social-media .social-media-desktop {
+        display: none;
+        height: 0;
+    }
+
+    .logo,
+    .social-media ul {
+        height: 6rem;
+    }
+
+    .social-media {
+        display: flex;
+        justify-self: end;
+        align-items: center;
+        height: 6rem;
+
+    }
+
+    .social-media .hamburger-menu {
+
+        font-size: 2rem;
+        display: flex;
+
+
+    }
+
+    .social-media .hamburger-menu a {
+        height: 6rem;
+        padding-top: 3rem;
+
+    }
+
+    .show-menu {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 20rem;
+        font-size: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        line-height: 2rem;
+        margin-top: 5rem;
+       background-color: cornsilk;
+        z-index: 3;
+    }
+
+    .toggle-menu ul li a {
+
+        border-bottom: 0.3rem solid;
+        border-color: blue;
+    }
+
+    .toggle-menu a {
+        display: inline-block;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+
+    }
+
+    section{
+        z-index: 1;
+    }
+
+}
+
+@media (width < 253px) {
+
+    .main-nav {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .logo {
+        padding: 0 5rem 0 0;
+    }
+
+    .social-media {
+
+        padding-right: 2rem;
+
+    }
+
+    .show-menu {
+        display: none;
+    }
+
+}
+
+@media (width < 215px) {
+
+  
+
+    .toggle-menu {
+        margin-left: 5rem;
+    }
+
+    .logo {
+        padding: 0 5rem 0 0;
+    }
+
+    .show-menu {
+        display: none;
+    }
+
+
+}
